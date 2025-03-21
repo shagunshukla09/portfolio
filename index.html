@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+      .about-image img {
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+          object-fit: cover;
+          border: 4px solid #fff;
+          color:#fff
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .about-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+      }
+      .projects-image img {
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+          object-fit: cover;
+          border: 4px solid #fff;
+          color:#fff
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .projects-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+      }
+      .dynamic-shape {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: float 6s infinite ease-in-out alternate;
+        }
+        .shape1 { top: 20px; left: 20px; }
+        .shape2 { bottom: 20px; right: 20px; width: 150px; height: 150px; }
+        .shape3 { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; }
+        .projects-section {
+            background: url('lll.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .floating-shape {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 5s infinite ease-in-out alternate;
+        }
+        .shape1 { top: 10%; left: 10%; }
+        .shape2 { bottom: 15%; right: 15%; width: 120px; height: 120px; }
+        .shape3 { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90px; height: 90px; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(15px); }
+        }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">MyPortfolio</div>
+    <nav>
+        <ul class="nav-links">
+           <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+           <li><a href="#contact">Contact   </a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 id="title">Welcome to My Portfolio</h1>
+            <p id="subtitle">Hi, I'm Shagun Shukla, a passionate developer.</p>
+            <a href="#projects" class="btn" id="btn">View My Work</a>
+            <a href="C:\Desktop\portfolio\shagun shukla resume.pdf" class="btn" id="resume-btn" download>Download Resume</a>
+        </div>
+    </div>
+    <section id="about" class="section about-section">
+      <div class="about-container">
+          <div class="about-image">
+              <img src="30874.jpg" alt="Profile Picture">
+          </div>
+          <div class="about-content">
+              <h2>About Me</h2>
+              <p style="text-decoration: #fff;">I am a web developer with experience in modern web technologies, passionate about building beautiful and functional web applications.</p>
+              <p>I specialize in front-end development using React and Tailwind CSS, and I love creating interactive and user-friendly designs.</p>
+          </div>
+      </div>
+  </section>
+</section>
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="project-card">
+      <h3>Medical Image Segmentation</h3>
+      <p>Medical image segmentation is a crucial technique in healthcare that involves partitioning medical images (such as MRI, CT scans, and X-rays) into meaningful regions to assist in disease diagnosis, treatment planning, and research. Using deep learning models like Vision Transformers (ViTs) and Convolutional Neural Networks (CNNs), I have worked on multi-cancer detection by segmenting tumors and abnormalities in medical scans. My approach focuses on improving segmentation accuracy, enabling early detection, and enhancing clinical decision-making.
+
+      </p><p>Key Technologies: Vision Transformers, CNNs, Deep Learning, Image Processing, Python, TensorFlow/PyTorch</p>
+      <a href="https://github.com/shagunshukla09/medical-image-segmentation" class="btn" target="_blank">View Project</a>
+  </div>
+  <div class="project-card">
+      <h3>E- Commerce Customer Segmentation </h3>
+      <p>Customer segmentation in e-commerce involves categorizing customers into distinct groups based on their purchasing behavior, preferences, and demographics. This enables businesses to personalize marketing strategies, improve customer retention, and optimize product recommendations.
+
+        In my work, I have leveraged machine learning algorithms such as K-Means Clustering, DBSCAN, and Hierarchical Clustering, along with deep learning techniques, to analyze customer data and uncover meaningful insights. By using features like purchase history, browsing behavior, and customer demographics, my approach helps businesses enhance customer experience and drive revenue growth.
+        </p>
+        <p>
+        Key Technologies: Python, Scikit-Learn, TensorFlow/PyTorch, Data Visualization, Unsupervised Learning</p>
+      <a href="https://github.com/shagunshukla09/E-commerce-customer-segmentation" class="btn" target="_blank">View Project</a>
+  </div>
+</section>
+
+  <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: shagunshukla2429@gmial.com</p>
+      <p>LinkedIn: linkedin.com/in/shagun-shukla-25259a236</p>
+      <p>Github: github.com/shagunshukla09</p>
+  </section>
+
+
+    <script>
+        gsap.from("#title", { opacity: 0, y: -50, duration: 1 });
+        gsap.from("#subtitle", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+        gsap.from("#btn", { opacity: 0, scale: 0.8, duration: 1, delay: 1 });
+        gsap.from(".section h2", { opacity: 0, y: -50, duration: 1, stagger: 0.5 });
+        gsap.from(".section p", { opacity: 0, x: -50, duration: 1, delay: 0.5, stagger: 0.3 });
+        gsap.from(".project-card", { opacity: 0, scale: 0.8, duration: 1, delay: 1, stagger: 0.5 });
+        gsap.from("#resume-btn", { opacity: 0, scale: 0.8, duration: 1, delay: 1, stagger: 0.5 });
+        gsap.from(".about-image img", { opacity: 0, scale: 0.5, duration: 1, delay: 0.5, ease: "back.out(1.7)" });
+        gsap.from(".about-content", { opacity: 0, x: -50, duration: 1, delay: 0.7 });
+        gsap.from(".floating-shape", { opacity: 0, scale: 0.5, duration: 1, delay: 0.5, stagger: 0.3, yoyo: true, repeat: -1 });
+    </script>
+</body>
+</html>
+
+
+        
